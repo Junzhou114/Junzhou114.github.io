@@ -104,8 +104,8 @@ a:active
 {
     width: 800px;
     margin: auto;
-    /*warning背景颜色*/
-    background: #ffcccc;
+    /*淡红色背景颜色 #ff9999*/
+    background: #ff9999;
     padding: 20px;
     padding-top: 1px;
     padding-bottom: 1px;
