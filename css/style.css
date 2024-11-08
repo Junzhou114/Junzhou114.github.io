@@ -104,7 +104,6 @@ a:active
 {
     width: 800px;
     margin: auto;
-    /*淡红色背景颜色 #ff9999*/
     background: #ff9999;
     padding: 20px;
     padding-top: 1px;
@@ -134,7 +133,7 @@ a:active
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: .5s;
+    transition: .4s;
     font-weight: 400;
     font-size: 17px;
     border: 1px solid var(--color);
