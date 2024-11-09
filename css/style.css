@@ -169,8 +169,8 @@ a:active
 
 .button::before 
 {
-    top: 0em;
-    left: 0em;
+    top: -.5em;
+    left: -.5em;
 }
 
 .button::after 
