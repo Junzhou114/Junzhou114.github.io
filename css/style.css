@@ -1,15 +1,17 @@
 html,body
 {
     --color: #2d8cf0;
+    color-scheme: light;
     font-family: "HarmonyOS Sans SC";
-    background-color: #f0f8ff;
+    /* background-color: #f7f7f7; */
+    /* background-color: #f0f8ff;
     background-image: linear-gradient(#f0f8ff, #fff);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
     margin: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; */
 }
 
 /* body {
@@ -116,7 +118,7 @@ a:active
     padding: 20px;
     border-radius: 6px;
     position:relative;
-    border-radius: 0 16px 16px 16px;
+    border-radius: 0 0 16px 16px;
     -webkit-box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.1);
             box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.1);
 	-webkit-animation:keyframes1 .6s;
@@ -125,7 +127,7 @@ a:active
 
 .text p
 {
-    font-size: 18px;
+    font-size: 16px;
     color: #666;
     line-height: 1.5;
     /* font-family: normal; */
@@ -145,6 +147,7 @@ a:active
     padding: 20px;
     border-radius: 6px;
     position:relative;
+    border-left: 2px solid var(--color);
     /* border-radius: 50px;
     background: #e0e0e0;
     -webkit-box-shadow: 20px 20px 60px #bebebe,
@@ -166,9 +169,44 @@ a:active
 
 .textw p
 {
-    font-size: 18px;
+    font-size: 16px;
     color: #666;
     line-height: 1.5;
+}
+
+.notecard.warning
+{
+    --note-background: #ff2a511a;
+    --note-theme: #ff2a51;
+    background-color: #ff2a511a;
+    -webkit-animation:keyframes1 .45s;
+            animation:keyframes1 .45s;
+            border-left: 2px solid #ff2a51;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.notecard
+{
+    font-size: 16px;
+    width: 800px;
+    margin: auto;
+    padding: 20px;
+    --note-background: #e5f3fe;
+    --note-theme: #e5f3fe;
+    background-color: #e5f3fe;
+    border-left: 2px solid var(--color);
+    border-radius: 6px;
+    box-shadow: 0 1px 2px #2b2a330d;
+    /* padding: 1rem 1rem 1rem 3rem; */
+    position: relative;
+    -webkit-animation:keyframes1 .6s;
+            animation:keyframes1 .6s;
+}
+
+.notecard, .notecard li, .notecard p
+{
+    color: var(--text-secondary);
 }
 
 .air
@@ -184,13 +222,13 @@ a:active
 
 .air p
 {
-    font-size: 18px;
+    font-size: 16px;
     color: #666;
     line-height: 1.5;
     font-family: normal;
 }
 
-.warning
+/* .warning
 {
     width: 800px;
     margin: auto;
@@ -209,18 +247,18 @@ a:active
 
 .warning p
 {
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     line-height: 1.5;
     font-family: normal;
-}
+} */
 
 /*按钮样式*/
 .button 
 {
     padding: 0.8em 1.7em;
     /*background-color: transparent;*/
-    background-color: #F0F8FF;
+    background-color: #f9fcff;
     border-radius: .8em .5em .8em .5em;
     position: relative;
     overflow: hidden;
@@ -281,7 +319,8 @@ a:active
 }
 
 /* 按钮样式2 */
-.button1 {
+.button1
+{
     padding-left: 20px;
     padding-right: 20px;
     width: calc(auto + 20px);
@@ -299,7 +338,8 @@ a:active
     z-index: 1;
 }
 
-.button1::before {
+.button1::before
+{
     content: "";
     position: absolute;
     top: 0;
@@ -313,29 +353,77 @@ a:active
     height: 45px;
 }
 
-.button1:hover::before {
+.button1:hover::before 
+{
     width: 100%;
 }
 
-.button1:hover {
+.button1:hover
+{
     color: white;
 }
 
-.button1:active:before {
+.button1:active:before
+{
     background: #2470c0;
 }
-/*导航栏样式*/
+/* 按钮样式3 */
+/* From www.lingdaima.com */
+.button2
+{
+    background-color: var(--color);
+    padding: 14px 40px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px dashed var(--color);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+}
+
+.button2 span:last-child
+{
+    display: none;
+}
+
+.button2:hover
+{
+    transition: .4s;
+    border: 2px dashed var(--color);
+    background-color: #fff;
+    color: var(--color);
+}
+
+.button2:active
+{
+    background-color: #cbe7ff;
+}
+   
+   
+/* 导航栏样式 */
 .top
 {
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(6px);
+    /* border: 0.888889px solid rgba(255, 255, 255, 0.18); */
+    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    /* border-radius: 12px; */
+    /* -webkit-border-radius: 12px; */
+    /* color: rgba(255, 255, 255, 0.75); */
+
     list-style-type: none;
     margin: 0;
     padding-top: 0;
     overflow: hidden;
-    background-color: #fff;
+    /* background-color: #fff; */
     position: fixed;
     top: 0;
     left: 0;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     width: 100%;
     z-index: 9999;
@@ -354,17 +442,27 @@ a:active
     color: #333;
     text-align: center;
     /*按钮样式、大小*/
-    padding: 16px 16px;
+    padding: 16px 18px;
     text-decoration: none;
 }
 
 .top li a:hover:not(.active)
 {
     background-color: #e0f0ff;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(6px);
+    /* border: 0.888889px solid rgba(255, 255, 255, 0.18); */
+    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
 }
 
 .topmain
 {
     background-color: #cbe7ff;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(6px);
+    /* border: 0.888889px solid rgba(255, 255, 255, 0.18); */
+    box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+    -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
     color: #333;
 }
